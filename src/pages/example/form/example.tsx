@@ -30,10 +30,12 @@ const ExampleForm: React.FC = () => {
 
   const create = async (data: IExample) => {
     try {
-      await exampleCreate({
-        name: data.name,
-        age: Number(data.age),
-      });
+      console.log(
+        await exampleCreate({
+          name: data.name,
+          age: Number(data.age),
+        }),
+      );
 
       swal.fire({
         icon: 'success',
